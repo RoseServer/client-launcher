@@ -14,7 +14,7 @@
 		x:Name="home"
 		WindowState="Normal"
 		WindowStartupLocation="CenterScreen"
-		Title="Tibia Launcher"
+		Title="RoseOT Launcher"
 		Loaded="TibiaLauncher_Load">
 	<Grid>
 
