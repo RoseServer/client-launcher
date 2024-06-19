@@ -31,6 +31,7 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+        cache: true
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
@@ -41,7 +42,9 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
 
     - name: Install dependencies
-      run: dotnet restore
+      run: |
+        dotnet add package Newtonsoft.Json --version 13.0.3
+        dotnet add package DotNetZip --version 1.16.0
 
     - name: Publish
       run: dotnet publish
