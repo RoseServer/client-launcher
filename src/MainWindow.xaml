@@ -12,8 +12,6 @@
 		FontFamily="Verdana"
 		Background="#131415"
 		x:Name="home"
-		WindowStyle="None"
-		ResizeMode="NoResize"
 		WindowState="Normal"
 		WindowStartupLocation="CenterScreen"
 		Title="Tibia Launcher"
@@ -40,32 +38,11 @@
 			<BitmapImage x:Key="BgHintsKey" UriSource="pack://application:,,,/Assets/bg_hints.png"/>
 			<BitmapImage x:Key="RhLoreKey" UriSource="pack://application:,,,/Assets/rh_lore.png"/>
 		</Grid.Resources>
-		<Grid.Background>
-			<ImageBrush ImageSource="{StaticResource BackGroundKey}" Stretch="UniformToFill" Opacity="100"></ImageBrush>
-		</Grid.Background>
-		<StackPanel
-			Grid.Column="1"
-			HorizontalAlignment="Right"
-			VerticalAlignment="Top"
-			Margin="0"
-			Orientation="Horizontal"
-			FlowDirection="RightToLeft">
-			<Button
-				x:Name="CloseButton"
-				Style="{StaticResource WindowButtonStyle}"
-				Content="{StaticResource close_ico}"
-				Click="CloseButton_Click"
-				Tag="IsCloseButton"
-				Cursor="Hand"/>
-			<Button
-				x:Name="MinimizeButton"
-				Style="{StaticResource WindowButtonStyle}"
-				Content="{StaticResource minimize_ico}"
-				Click="MinimizeButton_Click"
-				Cursor="Hand"/>
-		</StackPanel>
+        <Grid.Background>
+            <ImageBrush ImageSource="{StaticResource BackGroundKey}" Stretch="UniformToFill" Opacity="100"></ImageBrush>
+        </Grid.Background>
 
-		<StackPanel
+        <StackPanel
 			Grid.Row="0"
 			VerticalAlignment="Bottom"
 			HorizontalAlignment="Center"

@@ -18,15 +18,15 @@ namespace CanaryLauncherUpdate
 {
 	public partial class SplashScreen : Window
 	{
-		static string launcerConfigUrl = "https://raw.githubusercontent.com/RoseServer/client-launcher/main/launcher_config.json";
-		// Load informations of launcher_config.json file
-		static ClientConfig clientConfig = ClientConfig.loadFromFile(launcerConfigUrl);
+		static string launcerConfigUrl = "https://raw.githubusercontent.com/RoseServer/client-launcher/master/launcher_config.json";
+        // Load informations of launcher_config.json file
+        static ClientConfig clientConfig = ClientConfig.loadFromFile(launcerConfigUrl);
 
 		static string clientExecutableName = clientConfig.clientExecutable;
 		static string urlClient = clientConfig.newClientUrl;
 
-		static readonly HttpClient httpClient = new HttpClient();
-		DispatcherTimer timer = new DispatcherTimer();
+		static HttpClient httpClient = new HttpClient();
+        DispatcherTimer timer = new DispatcherTimer();
 
 		private string GetLauncherPath(bool onlyBaseDirectory = false)
 		{
